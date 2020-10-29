@@ -24,8 +24,8 @@ class EnhancedTableToolbar extends Component {
         this.props.removeAllUserToList()
     };
     handleAddNewUser(){
-        this.props.openDialog();
         this.props.removeDataUserFormDialog()
+        this.props.openDialog();
     }
     render() {
         const classes = this.props.classes;
@@ -74,7 +74,7 @@ const mapDispatchToProps = (dispatch) =>{
         },
         openDialog : () =>{
             dispatch( open_dialog() )
-        },
+        }, 
         removeDataUserFormDialog : () =>{
             let dataItem = {
                 _id: '',
