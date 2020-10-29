@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { withStyles } from '@material-ui/core';
 import styles from './styles'
-import { add_user_to_list, remove_user_to_list, set_order, set_orderBy } from '../../actions';
+import { add_all_user_to_list, remove_all_user_to_list, set_order, set_orderBy } from '../../actions';
 
 class Thead extends Component {
     constructor(props){
@@ -38,7 +38,7 @@ class Thead extends Component {
                 if( this.props.selectAll.filter( id => id === user._id ).length === 0 ){
                     listId.push(user._id)
                 }
-            });
+            }); 
             this.props.addAllUserToList(listId)
         } else {
             this.props.removeAllUserToList()
@@ -107,10 +107,10 @@ const mapDispatchToProps = (dispatch) =>{
             dispatch( set_orderBy(orderBy) )
         },
         addAllUserToList : (listId) =>{
-            dispatch( add_user_to_list(listId) )
+            dispatch( add_all_user_to_list(listId) )
         },
         removeAllUserToList : () =>{
-            dispatch( remove_user_to_list() )
+            dispatch( remove_all_user_to_list() )
         }
     }
 }

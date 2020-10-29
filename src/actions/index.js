@@ -95,14 +95,9 @@ export const removeUser = (_id) => {
 export const deleteListUser = (listUser) =>{
     return (dispatch) =>{
         listUser.map( (_id) =>{
-            return deleteUser(_id)
-            .then( res =>{
-                dispatch( removeUser(_id) )
-            } )
-            .then( res =>{
-                dispatch( notiSnackbar("Deleted user!") )
-            } )
+            return dispatch( deleteUserRequest(_id) )
         } )
+        
     }
 }
 
