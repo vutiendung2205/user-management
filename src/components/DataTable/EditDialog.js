@@ -63,7 +63,17 @@ class EditDialog extends Component {
         })
     }
     handleClose(){
-        this.props.openDialog()
+        this.props.openDialog();
+        this.setState({
+            _id: '',
+            avatar: '',
+            fistname: '',
+            lastname: '',
+            company: '',
+            jobtitle: '',
+            email: '',
+            phone: ''
+        })
     }
     handleSubmitForm(){
         let dataUser = {
