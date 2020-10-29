@@ -81,10 +81,30 @@ class EditDialog extends Component {
                 let user = {...this.state};
                 this.props.editUser(user);
                 this.props.openDialog();
+                this.setState({
+                    _id: '',
+                    avatar: '',
+                    fistname: '',
+                    lastname: '',
+                    company: '',
+                    jobtitle: '',
+                    email: '',
+                    phone: ''
+                })
             } else{
                 // ADD NEW DATA USER;
                 
                 this.props.addNewUser(dataUser)
+                this.setState({
+                    _id: '',
+                    avatar: '',
+                    fistname: '',
+                    lastname: '',
+                    company: '',
+                    jobtitle: '',
+                    email: '',
+                    phone: ''
+                })
             }
         }else{
             this.setState({
