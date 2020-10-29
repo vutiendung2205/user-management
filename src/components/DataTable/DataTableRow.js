@@ -24,6 +24,7 @@ class DataTableRow extends Component {
     handleDeleteItem(e,_id){
         e.stopPropagation();
         this.props.deleteItem(_id)
+        this.props.removeUserToList(_id)
     }
     handleEditItem(e,dataItem){
         this.props.openDialog()
