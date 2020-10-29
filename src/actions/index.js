@@ -67,12 +67,12 @@ export const open_dialog = () =>{
 // delete data user
 export const deleteUserRequest = (_id) =>{
     return (dispatch) =>{
-        return deleteUser(_id)
+        return deleteUser(_id) 
         .then( res =>{
             dispatch( removeUser(_id) )
         } )
         .then( res =>{
-            dispatch( removeIdFromSelectedAll(_id) )
+            dispatch( remove_user_to_list(_id) )
         } )
         .then( res =>{
             dispatch( notiSnackbar("Deleted!") )
@@ -85,12 +85,12 @@ export const removeUser = (_id) => {
         _id
     }
 }
-export const removeIdFromSelectedAll = (_id) =>{
-    return{
-        type: "REMOVE_ID_WHILE_DELETED_USER",
-        _id
-    }
-}
+// export const removeIdFromSelectedAll = (_id) =>{
+//     return{
+//         type: "REMOVE_ID_WHILE_DELETED_USER", 
+//         _id
+//     }
+// }
 // delete list user
 export const deleteListUser = (listUser) =>{
     return (dispatch) =>{
@@ -154,7 +154,7 @@ export const set_order = (order) =>{
 }
 export const set_orderBy = (orderBy) =>{
     return {
-        type : 'SET_ORDER',
+        type : 'SET_ORDERBY',
         orderBy
     }
 }

@@ -21,7 +21,7 @@ class EnhancedTableToolbar extends Component {
 
     handleDeleteListUser(){
         this.props.deleteListUsers(this.props.selectAll);
-        this.props.removeAllUserToList()
+        // this.props.removeAllUserToList()
     };
     handleAddNewUser(){
         this.props.removeDataUserFormDialog()

@@ -38,13 +38,8 @@ class EditDialog extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmitForm = this.handleSubmitForm.bind(this)
     }
-    componentDidMount(){
-        this.setState({
-            avatar: avatar[Math.floor(Math.random() * 6)]
-        })
-    }
     componentWillReceiveProps(nextProps){
-        if(nextProps.dialog._id !== this.state._id){
+        if(nextProps.dialog._id !== this.state._id || nextProps.dialog._id ==="" ){
             this.setState({
                 _id: nextProps.dialog._id,
                 avatar: nextProps.dialog._id !== '' ? nextProps.dialog.avatar : avatar[Math.floor(Math.random() * 6)],

@@ -34,7 +34,8 @@ export const editDataUser = (user) =>{
 export const deleteUser = (_id) =>{
     return axios({
         url: `${URL}/${_id}`,
-        method: 'DELETE'
+        method: 'DELETE',
+        data: _id
     })
 }
 
