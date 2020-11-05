@@ -1,11 +1,11 @@
-import dataReducer from './Data/index';
 import { combineReducers } from 'redux';
-import searchReducer from './Search/index'
-import dialogReducer from './Dialog';
-import snackbarReducer from './Snackbar/index'
-import sortReducer from './Sort';
-import selectAll from './SelectAllClick/index'
-import paginationReducer from './Pagination';
+import dataReducer from '../Slice/DataSlice';
+import searchReducer from '../Slice/searchSlice';
+import dialogReducer from '../Slice/DialogSlice';
+import snackbarReducer from '../Slice/SnackbarSlice';
+import sortReducer from '../Slice/SortSlice';
+import selectAll from '../Slice/SelectAllSlice'
+import paginationReducer from '../Slice/PaginationSlice';
 
 
 const rootReducer = combineReducers({
